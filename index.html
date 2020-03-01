@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Битва Бургеров в МакДональдс™</title>
+  <meta name="keywords" content="McFans" />
+  <meta name="description" content="Выбери своего чемпиона! Заходи на сайт и решай, кто останется в меню." />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no" />
+
+  <meta property="og:title" content="Битва Бургеров в МакДональдс™"/>
+  <meta property="og:description" content="Выбери своего чемпиона! Заходи на сайт и решай, кто останется в меню."/>
+  <meta property="og:image" content="https://mcfans.by/images/sharing.jpg"/>
+  <meta itemprop="name" content="Битва Бургеров в МакДональдс™"/>
+  <meta itemprop="description" content="Выбери своего чемпиона! Заходи на сайт и решай, кто останется в меню."/>
+  <meta itemprop="image" content="https://mcfans.by/images/sharing.jpg"/>
+
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+  <style>
+    @font-face {
+      font-family: 'Speedee';
+      src: local('Speedee'), local('Speedee-Regular'),
+        url('fonts/Speedee/Speedee_Rg.otf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: fallback;
+    }
+    @font-face {
+      font-family: 'Speedee';
+      src: local('Speedee Italic'), local('Speedee-Italic'),
+        url('fonts/Speedee/Speedee_I.otf') format('truetype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: fallback;
+    }
+    @font-face {
+      font-family: 'Speedee';
+      src: local('Speedee Bold'), local('Speedee-Bold'),
+        url('fonts/Speedee/Speedee_Bd.otf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: fallback;
+    }
+    @font-face {
+      font-family: 'Speedee';
+      src: local('Speedee Bold Italic'), local('Speedee-Bold-Italic'),
+        url('fonts/Speedee/Speedee_BdIt.otf') format('truetype');
+      font-weight: 700;
+      font-style: italic;
+      font-display: fallback;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css?v=2.0" type="text/css" media="all" />
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NBMD92X');</script>
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157558686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-157558686-1');
+</script>
+<body>
+<div class="preloader">
+  <div class="preloader-logo">
+    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" height="238.5" width="272.7" version="1.1" viewBox="0 0 272.70001 238.5">
+     <path fill="#ffbc0d" d="m195.8 17.933c23.3 0 42.2 98.3 42.2 219.7h34c0-130.7-34.3-236.5-76.3-236.5-24 0-45.2 31.7-59.2 81.5-14-49.8-35.2-81.5-59-81.5-42 0-76.2 105.7-76.2 236.4h34c0-121.4 18.7-219.6 42-219.6s42.2 90.8 42.2 202.8h33.8c0-112 19-202.8 42.3-202.8"/>
+    </svg>
+  </div>
+  <div class="preloader-name"></div>
+</div>
+<style>
+  .preloader {
+    position: fixed;
+    background: #FFF;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+  }
+  .preloader.leave {
+    opacity: 0;
+  }
+</style>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMD92X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="app" class="wrapper">
+<header class="header" id="header">
+
+  <div class="header-inner">
+    <div class="flex valign-end align-justify">
+
+      <div class="header-logo">
+        <a href="https://mcdonalds.by/ru/" target="_blank"><img src="images/mclogo.png" alt="McFans" loading="lazy"></a>
+      </div>
+      
+      <div class="header-menu" :class="{yellow: chickenClub}">
+        <div :class="{ gray: infoStatus,  first: screenActive === 0}" class="header-menu-icon home" @click.prevent="toHomeScreen()">
+          <svg class="sprite svg-menu-icon"><use xlink:href="svg/svg/symbols.svg#m-home"/></svg>
+        </div>
+        <a :class="{ gray: infoStatus }" href="https://www.instagram.com/mcdonalds_belarus/" target="_blank" class="header-menu-icon">
+          <svg class="sprite svg-menu-icon"><use xlink:href="svg/svg/symbols.svg#m-insta"/></svg>
+        </a>
+        <div class="header-menu-icon" @click="infoVisibility()" :class="{ active: infoStatus }">
+          <svg class="sprite svg-menu-icon"><use xlink:href="svg/svg/symbols.svg#m-info"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</header>
+
+<div id="middle" class="middle" v-if="!isMobile">
+
+<div class="scroll-by-screens" ref="screens" @wheel="screenScroll($event)">
+  
+  <div class="screen screen-home visible" id="screen_home" data-index="0">
+    <transition
+      v-on:enter="screenOneEnter"
+      v-on:leave="screenOneLeave"
+      v-bind:css="false"
+    >
+      <div class="row row-no-paddings" v-show="screenActive === 0 && !infoStatus">
+        <div class="flx-6 flx-x-12">
+          <div class="half-screen flex align-center valign-center">
+
+            <div class="club-promo chicken">
+              <div class="club-promo-imgs">
+                <div class="club-promo-logo">
+                  <img src="images/chiken.png" srcset="images/chiken@2x.png 2x" alt="Лого фанклуба Чикен Премьер" class="lazy" loading="lazy">
+                </div>
+                <div class="club-promo-burger">
+                  <img src="images/burger-chicken-clear.png" srcset="images/burger-chicken-clear@2x.png 2x" alt="alt" class="lazy" loading="lazy">
+                  <!-- <img src="images/burger-chicken.png" srcset="images/burger-chicken@2x.png 2x" alt="alt" class="lazy" loading="lazy"> -->
+                </div>
+              </div>
+              <div class="club-promo-name righted">Чикен<br> Премьер</div>
+            </div><!--.club-promo-->
+          </div>
+        </div><!--.flx-6-->
+
+        <div class="flx-6 flx-x-12">
+          <div class="half-screen flex align-center valign-center">
+
+            <div class="club-promo cheeze">
+              <div class="club-promo-name">Тройной<br>Чизбургер</div>
+              <div class="club-promo-imgs">
+                <div class="club-promo-logo">
+                  <img src="images/bull.png" srcset="images/bull@2x.png 2x" alt="alt" class="lazy" loading="lazy">
+                </div>
+                <div class="club-promo-burger">
+                  <img src="images/burger-cheeze-clear.png" srcset="images/burger-cheeze-clear@2x.png 2x" alt="alt" class="lazy" loading="lazy">
+                  <!-- <img src="images/burger-cheeze.png" srcset="images/burger-cheeze@2x.png 2x" alt="alt" class="lazy" loading="lazy"> -->
+                </div>
+              </div>
+              
+              
+            </div><!--.club-promo-->
+            
+          </div>
+        </div><!--.flx-6-->
+      </div><!--.row-->
+    </transition>
+
+    <div class="screen-skew">
+      <div class="screen-skew-yellow"></div>
+      <div class="screen-skew-white"></div>
+      <div class="vs"><img src="images/vs.png" alt="vs" loading="lazy"></div>
+    </div>
+  </div><!--.screen-->
+
+  <div class="screen screen-comparsion" id="screen_comparsion" data-index="1">
+
+    <transition
+    v-on:enter="screenTwoEnter"
+    v-on:leave="screenTwoLeave"
+    v-bind:css="false"
+    >
+      <div class="row row-no-paddings" v-show="screenActive === 1">
+        <div class="flx-6 flx-m-12">
+          <div class="half-screen flex align-center valign-center">
+            <div class="burger chicken">
+              <ul class="burger-info">
+                <li class="burger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-1"/></svg>куриное совершенство</li>
+                <li class="burger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-2"/></svg>несравненный хруст бекона</li>
+                <li class="burger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-1"/></svg>овощная экспертиза</li>
+                <li class="burger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-2"/></svg>расширение линейки МакКомбо</li>
+              </ul>
+              <div class="burger-img">
+                <img src="images/burger-chicken-clear.png" srcset="images/burger-chicken-clear@2x.png 2x" alt="Бургер Чикен Премьер" >
+              </div>
+              <div class="burger-btn">
+                <a href="javascript:void(0)" class="btn btn-bordered-white" :class="{active: chickenClubBtn}" @click.prevent="showChickenClub()">{{ chickenClubBtn ? "Участник фанклуба" : "Вступить в фанклуб"}}</a>
+              </div>
+            </div><!--.burger-->
+          </div>
+        </div><!--.flx-6-->
+        <div class="flx-6 flx-m-12">
+          <div class="half-screen flex align-right valign-center">
+            <div class="burger cheeze">
+              <ul class="burger-info">
+                <li class="burger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-1"/></svg>тройной сырный удар</li>
+                <li class="burger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-2"/></svg>бифштексное насыщение</li>
+                <li class="burger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-1"/></svg>аппетитный баланс</li>
+                <li class="burger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-2"/></svg>вариативность МакКомбо</li>
+              </ul>
+              <div class="burger-img">
+                <img src="images/burger-cheeze-clear.png" srcset="images/burger-cheeze-clear@2x.png 2x" alt="Бургер Тройной чизбургер" >
+              </div>
+              <div class="burger-btn">
+                <a href="javascript:void(0)" class="btn btn-bordered-yellow" :class="{active: cheezeClubBtn}" @click="showCheezeClub()">{{ cheezeClubBtn ? "Участник фанклуба" : "Вступить в фанклуб"}}</a>
+              </div>
+            </div><!--.burger-->
+          </div>
+        </div><!--.flx-6-->
+      </div><!--.row-->
+    </transition>
+
+    <div class="screen-skew">
+      <div class="screen-skew-yellow"></div>
+      <div class="screen-skew-white"></div>
+      <div class="vs"><img src="images/vs.png" alt="vs" loading="lazy"></div>
+    </div><!--.screen-skew-->
+
+    <transition
+      v-on:enter="chickenClubEnter"
+      v-on:leave="clubLeave"
+      v-bind:css="false"
+    >
+      <div class="club club-chicken" v-if="chickenClub">
+        <div class="club-chicken-body">
+          <div class="club-chicken-imgs">
+            <img src="images/chiken.png" srcset="images/chiken@2x.png 2x" alt="лого Чикен Премьер" class="club-chicken-logo" ref="club_chicken_logo">
+            <img src="images/burger-chicken-clear.png" srcset="images/burger-chicken-clear@2x.png 2x" alt="Чикен Премьер" class="club-chicken-burger" ref="club_chicken_burger">
+          </div>
+          <div class="club-chicken-congratulate club-chicken-text" ref="club_chicken_congratulate">Поздравляем!<br> 
+          Вы в фанклубе<br>Чикен Премьера!</div>
+          <div class="club-chicken-social club-chicken-text" ref="club_chicken_text">
+            Следи за новостями<br>
+            своего фанклуба<br>
+            <a href="https://www.instagram.com/explore/tags/заЧикенПремьер" target="_blank">#заЧикенПремьер</a><br>
+            и в аккаунте<br>
+            <a href="https://www.instagram.com/mcdonalds_belarus/" target="_blank">@mcdonalds_belarus</a>
+          </div>
+        </div>
+        <div class="club-chicken-bg" ref="club_chicken_bg"></div>
+      </div>
+    </transition>
+
+    <transition
+      v-on:enter="cheezeClubEnter"
+      v-on:leave="clubLeave"
+      v-bind:css="false"
+    >
+      <div class="club club-cheeze" v-if="cheezeClub">
+        <div class="club-cheeze-body">
+          <div class="club-cheeze-imgs">
+            <img src="images/bull.png" srcset="images/bull@2x.png 2x" alt="лого Тройной Чиз" class="club-cheeze-logo" ref="club_cheeze_logo">
+            <img src="images/burger-cheeze-clear.png" srcset="images/burger-cheeze-clear@2x.png 2x" alt="Тройной Чиз" class="club-cheeze-burger" ref="club_cheeze_burger">
+          </div>
+          <div class="club-cheeze-congratulate club-cheeze-text" ref="club_cheeze_congratulate">Поздравляем!<br> 
+          Вы в фанклубе<br>Тройного Чизбургера!</div>
+          <div class="club-cheeze-social club-cheeze-text" ref="club_cheeze_text">
+            Следи за новостями<br>
+            своего фанклуба<br>
+            <a href="https://www.instagram.com/explore/tags/заТройнойЧиз" target="_blank">#заТройнойЧиз</a><br>
+            и в аккаунте<br>
+            <a href="https://www.instagram.com/mcdonalds_belarus/" target="_blank">@mcdonalds_belarus</a>
+          </div>
+        </div>
+        <div class="club-cheeze-bg" ref="club_cheeze_bg"></div>
+      </div>
+    </transition>
+  </div><!--.screen-comparsion-->
+
+  <div class="screen screen-insta" id="screen_insta" data-index="2">
+    <div class="row row-no-paddings">
+      <div class="flx-6 flx-m-12">
+        <div class="half-insta chicken">
+          <div class="insta-title">#заЧикенПремьер</div>
+          <div class="insta-photos row" id="insta_gallery_1" ref="insta_chicken"></div><!--.insta-photos-->
+        </div>
+      </div><!--.flx-6-->
+      <div class="flx-6 flx-m-12">
+        <div class="half-insta cheeze">
+          <div class="insta-title">#заТройнойЧиз</div>
+          <div class="insta-photos row" id="insta_gallery_2" ref="insta_cheeze">
+          </div><!--.row-->
+        </div>
+      </div><!--.flx-6-->
+    </div><!--.row-->
+    <div class="screen-skew">
+      <div class="screen-skew-yellow"></div>
+      <div class="screen-skew-white"></div>
+    </div>
+  </div>
+  
+</div><!--.scroll-by-screens-->
+<div class="scroll-hint">
+  <svg class="sprite svg-scroll"><use xlink:href="svg/svg/symbols.svg#scroll"/></svg>
+</div>
+</div><!-- #middle -->
+
+<div class="m-middle mobile-screens" v-else>
+
+  <div class="m-screen m-screen-home m-animate" id="m_screen_home" data-index="0">
+    <div class="row row-no-paddings valign-center">
+      <div class="flx-6 flx-x-12">
+        <div class="m-half-screen flex valign-center m-half-screen-chicken">
+          <div class="promo chicken">
+            <div class="promo-imgs">
+              <div class="promo-logo">
+                <img src="images/chiken.png" srcset="images/chiken@2x.png 2x" alt="Лого фанклуба Чикен Премьер" class="lazy" loading="lazy">
+              </div>
+              <div class="promo-burger">
+                <img src="images/burger-chicken.png" srcset="images/burger-chicken@2x.png 2x" alt="alt" class="lazy" loading="lazy">
+              </div>
+            </div>
+            <div class="promo-name">Чикен<br>Премьер</div>
+          </div>
+        </div><!--.half-screen-->
+      </div><!--.flx-->
+
+      <div class="flx-6 flx-x-12">
+        <div class="m-half-screen m-half-screen-cheeze flex valign-center">
+          <div class="promo cheeze">
+            <div class="promo-imgs">
+              <div class="promo-logo">
+                <img src="images/bull.png" srcset="images/bull@2x.png 2x" alt="alt" class="lazy" loading="lazy">
+              </div>
+              <div class="promo-burger">
+                <img src="images/burger-cheeze.png" srcset="images/burger-cheeze@2x.png 2x" alt="alt" class="lazy" loading="lazy">
+              </div>
+            </div>
+            <div class="promo-name">Тройной<br>Чизбургер</div>
+          </div>
+        </div><!--.half-screen-->
+      </div><!--.flx-->
+    </div><!--.row-->
+
+    <div class="screen-skew">
+      <div class="screen-skew-yellow"></div>
+      <div class="screen-skew-white"></div>
+      <div class="vs"><img src="images/vs.png" alt="vs" loading="lazy"></div>
+    </div>
+  </div><!--.m-screen-->
+
+  <div class="m-screen m-screen-comparsion visible" id="m_screen_comparsion" data-index="1">
+
+    <div class="screen-body">
+
+    <div class="row row-no-paddings">
+      <div class="flx-6 flx-x-12 flx-chicken-comparsion m-animate" id="chicken_comparsion">
+        <div class="half-screen flex align-center valign-center">
+          <div class="murger chicken">
+            <ul class="murger-info">
+              <li class="murger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-1"/></svg>куриное совершенство</li>
+              <li class="murger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-2"/></svg>несравненный хруст бекона</li>
+              <li class="murger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-1"/></svg>овощная экспертиза</li>
+              <li class="murger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-2"/></svg>расширение линейки МакКомбо</li>
+            </ul>
+            <div class="murger-img">
+              <img src="images/burger-chicken-clear.png" srcset="images/burger-chicken-clear@2x.png 2x" alt="Бургер Чикен Премьер" >
+            </div>
+            <div class="murger-btn">
+              <a href="javascript:void(0)" class="btn btn-bordered-white" :class="{active: chickenClubBtn}" @click.prevent="showChickenClub()">{{ chickenClubBtn ? "Участник фанклуба" : "Вступить в фанклуб"}}</a>
+            </div>
+          </div><!--.burger-->
+        </div>
+      </div><!--.flx-6-->
+
+      <div class="flx-6 flx-x-12 m-animate" id="cheeze_comparsion">
+        <div class="half-screen flex align-right valign-center">
+          <div class="murger cheeze">
+            <ul class="murger-info">
+              <li class="murger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-1"/></svg>тройной сырный удар</li>
+              <li class="murger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-2"/></svg>бифштексное насыщение</li>
+              <li class="murger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-1"/></svg>аппетитный баланс</li>
+              <li class="murger-info-item"><svg class="sprite svg-lines"><use xlink:href="svg/svg/symbols.svg#lines-2"/></svg>вариативность МакКомбо</li>
+            </ul>
+            <div class="murger-img">
+              <img src="images/burger-cheeze-clear.png" srcset="images/burger-cheeze-clear@2x.png 2x" alt="Бургер Тройной чизбургер" >
+            </div>
+            <div class="murger-btn">
+              <a href="javascript:void(0)" class="btn btn-bordered-yellow" :class="{active: cheezeClubBtn}" @click="showCheezeClub()">{{ cheezeClubBtn ? "Участник фанклуба" : "Вступить в фанклуб"}}</a>
+            </div>
+          </div><!--.murger-->
+        </div>
+      </div><!--.flx-6-->
+    </div><!--.row-->
+
+    <div class="screen-skew">
+      <div class="screen-skew-yellow"></div>
+      <div class="screen-skew-white"></div>
+      <div class="vs"><img src="images/vs.png" alt="vs" loading="lazy"></div>
+    </div><!--.screen-skew-->
+
+    </div><!--.screen-body-->
+
+    <transition
+      v-on:enter="mchickenClubEnter"
+      v-on:leave="mclubLeave"
+      v-bind:css="false"
+    >
+      <div class="club club-chicken" v-if="chickenClub">
+        <div class="club-chicken-body">
+          <div class="club-chicken-congratulate club-chicken-text" ref="club_chicken_congratulate">Поздравляем!<br> 
+            Вы в фанклубе<br>Чикен Премьера!</div>
+          <div class="club-chicken-imgs">
+            <img src="images/chiken.png" srcset="images/chiken@2x.png 2x" alt="лого Чикен Премьер" class="club-chicken-logo" ref="club_chicken_logo">
+            <img src="images/burger-chicken.png" srcset="images/burger-chicken@2x.png 2x" alt="Чикен Премьер" class="club-chicken-burger" ref="club_chicken_burger">
+          </div>
+          <div class="club-chicken-social club-chicken-text" ref="club_chicken_text">
+            Следи за новостями<br>
+            своего фанклуба<br>
+            <a href="https://www.instagram.com/explore/tags/заЧикенПремьер" target="_blank">#заЧикенПремьер</a><br>
+            и в аккаунте<br>
+            <a href="https://www.instagram.com/mcdonalds_belarus/" target="_blank">@mcdonalds_belarus</a>
+          </div>
+        </div>
+        <div class="club-chicken-bg" ref="club_chicken_bg"></div>
+      </div>
+    </transition>
+
+    <transition
+      v-on:enter="mcheezeClubEnter"
+      v-on:leave="mclubLeave"
+      v-bind:css="false"
+    >
+      <div class="club club-cheeze" v-if="cheezeClub">
+        <div class="club-cheeze-body">
+          <div class="club-cheeze-congratulate club-cheeze-text" ref="club_cheeze_congratulate">Поздравляем!<br> 
+            Вы в фанклубе<br>Тройного Чизбургера!</div>
+
+          <div class="club-cheeze-imgs">
+            <img src="images/bull.png" srcset="images/bull@2x.png 2x" alt="лого Тройной Чиз" class="club-cheeze-logo" ref="club_cheeze_logo">
+            <img src="images/burger-cheeze.png" srcset="images/burger-cheeze@2x.png 2x" alt="Тройной Чиз" class="club-cheeze-burger" ref="club_cheeze_burger">
+          </div>
+          
+          <div class="club-cheeze-social club-cheeze-text" ref="club_cheeze_text">
+            Следи за новостями<br>
+            своего фанклуба<br>
+            <a href="https://www.instagram.com/explore/tags/заТройнойЧиз" target="_blank">#заТройнойЧиз</a><br>
+            и в аккаунте<br>
+            <a href="https://www.instagram.com/mcdonalds_belarus/" target="_blank">@mcdonalds_belarus</a>
+          </div>
+        </div>
+        <div class="club-cheeze-bg" ref="club_cheeze_bg"></div>
+      </div>
+    </transition>
+  </div><!--.screen-comparsion-->
+
+  <div class="m-screen m-screen-insta visible" id="m_screen_insta" data-index="2">
+    <div class="row row-no-paddings">
+      <div class="flx-6 flx-x-12 m-animate" :class="classInsta1">
+        <div class="half-insta chicken">
+          <div class="insta-title">#заЧикенПремьер</div>
+          <div class="insta-photos row" id="insta_gallery_1" ref="insta_chicken"></div><!--.insta-photos-->
+        </div>
+      </div><!--.flx-6-->
+      <div class="flx-6 flx-x-12 m-animate" :class="classInsta2">
+        <div class="half-insta cheeze">
+          <div class="insta-title">#заТройнойЧиз</div>
+          <div class="insta-photos row" id="insta_gallery_2" ref="insta_cheeze">
+          </div><!--.row-->
+          <p class="social-appeal">Смотрите, как проходит «Битва бургеров»<br>в социальных сетях!</p>
+        </div>
+      </div><!--.flx-6-->
+    </div><!--.row-->
+    <div class="screen-skew">
+      <div class="screen-skew-yellow"></div>
+      <div class="screen-skew-white"></div>
+    </div>
+  </div><!--.m-screen-->
+</div><!--.m-middle-->
+
+<transition name="popup">
+  <div class="screen-info" v-if="infoStatus">
+    <div class="screen-info-flex flex valign-center">
+      <div class="screen-info-inner centered">
+        <div class="screen-info-title">Битва за место в меню МакДональдс!<br>Вступай в фанклуб и решай, кто останется!</div>
+        <p>В феврале МакДональдс проводит «Битву бургеров»! За место в меню соревнуются два новых бургера-чемпиона: Чикен Премьер и Тройной Чизбургер.</p> 
+          
+        <p>В течение месяца на сайте или в наших социальных сетях вы можете вступать в фан-клуб одного из чемпионов.<br>Только вы решаете, кто по истечении месяца останется в основном меню!</p>
+          
+        <p>Чем больше фан-клуб, тем выше шансы одержать победу!<br><strong>Результаты – 1 марта!</strong></p>
+        <div class="screen-info-btn">
+          <a href="javascript:void(0)" class="btn btn-bordered " @click.prevent="infoVisibility()">ОК!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</transition>
+
+</div><!-- #wrapper -->
+
+<script src="js/vue.js"></script>
+<script src="js/gsap.min.js"></script>
+<script src="js/app.js?v=2.0"></script>
+<script src="js/lightgallery.js"></script>
+<link rel="stylesheet" href="css/lightgallery.css">
+</body>
+</html>

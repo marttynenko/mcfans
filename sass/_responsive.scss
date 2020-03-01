@@ -1,0 +1,884 @@
+/* --
+RESPONSIVE STYLES ----------------------- */
+.m-middle {
+	padding-top: 80px;
+}
+.m-screen {
+	position: relative;
+	z-index: 1;
+	
+	&-home {
+		padding: 0 5vw;
+	}
+}
+.promo {
+	position: relative;
+	height: 50vh;
+	width: 100%;
+	margin-bottom: 10vh;
+
+	&-logo {
+		img {
+			position: absolute;
+			height: 47vh;
+		}
+	}
+	&-burger {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: -20%;
+
+		img {
+			max-height: 30vh;
+		}
+	}
+	&-name {
+		position: absolute;
+		font-weight: 700;
+		font-style: italic;
+		font-size: 3.2vw;
+		line-height: 1.1;
+	}
+	&.chicken {
+		padding-right: 40%;
+
+		.promo-name {
+			right: -2vw;
+			top: 10%;
+			text-align: right;
+		}
+		.promo-logo {
+			img {
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+	&.cheeze {
+		padding-left: 40%;
+
+		.promo-name {
+			left: -2vw;
+			bottom: 0;
+		}
+		.promo-logo {
+			img {
+				right: 4vw;
+				top: 0;
+			}
+		}
+		.promo-burger {
+			left: auto;
+			right: -5vw;
+			text-align: right;
+		}
+	}
+}
+
+.murger {
+	padding-top: 8vh;
+	width: 100%;
+
+	&-info {
+		@include fz(20);
+		font-weight: 700;
+		font-style: italic;
+		padding-left: 8vw;
+		padding-right: 10px;
+		backface-visibility: hidden;
+		line-height: 1.3;
+		margin-bottom: 2vh;
+
+		&-item {
+			position: relative;
+			margin-bottom: 6px;
+
+			svg.sprite {
+				position: absolute;
+				width: 32px;
+				height: 4px;
+				left: -40px;
+				top: 50%;
+				margin-top: -1px;
+			}
+		}
+	}
+	&-img {
+		backface-visibility: hidden;
+
+		img {
+			max-height: 50vh;
+		}
+	}
+	&-btn {
+		padding-left: 8vw;
+		backface-visibility: hidden;
+	}
+	&.cheeze {
+		padding-left: 12%;
+
+		.murger-info,
+		.murger-btn {
+			padding-left: 12vw;
+		}
+		.murger-img {
+			text-align: right;
+			margin-right: -5vw;
+		}
+	}
+}
+.social-appeal {
+	display: none;
+}
+
+
+@media (min-width: 1920px) {
+
+.burger {
+	&-img {
+		img {
+			height: 42vh;
+		}
+	}
+	&.cheeze {
+		.burger-img {
+			margin-right: 0;
+		}
+	}
+}
+.club-cheeze {
+	&-logo {
+		height: 70vh;
+	}
+	&-burger {
+		height: 48.5vh;
+	}
+}
+.club-chicken {
+	&-logo {
+		height: 70vh;
+	}
+	&-burger {
+		height: 48.5vh;
+	}
+}
+
+}/*min1920*/
+
+@media (max-width : 1600px) {
+
+	.header-menu {
+		font-size: 0;
+	
+		&-icon {
+			margin-left: 30px;
+			width: 40px;
+			height: 40px;
+	
+			&.home {
+				width: 46px;
+			}
+		}
+	}
+	.scroll-hint {
+		width: 40px;
+		height: 40px;
+	}
+
+}/*1600px end*/
+
+
+@media (max-width : 1280px) {
+
+
+
+}/*1280px end*/
+
+
+@media (max-width : 1140px) {
+
+
+}/*1140px end*/
+
+
+@media (max-width : 992px) {
+
+@for $i from 1 through 12 {
+  .flx-m-#{$i} {
+  	-webkit-flex: (100% / 12 * $i);
+  	-moz-flex: (100% / 12 * $i);
+  	-ms-flex: (100% / 12 * $i);
+  	-o-flex: (100% / 12 * $i);
+  	flex: (100% / 12 * $i);
+  	max-width: (100% / 12 * $i);
+  }
+}
+@for $ord from -3 through 3 {
+  .m-order-#{$ord} {
+		-webkit-box-ordinal-group: $ord;
+		-webkit-order: $ord;
+		-ms-flex-order: $ord;
+		order: $ord;
+  }
+}
+.m-hidden {
+	display: none;
+}
+
+header.header {
+	background: #FFF;
+	padding: 22px 0;
+	box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+}
+.header-inner {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.header-logo {
+	img {
+		height: 36px;
+		width: auto;
+	}
+}
+.header-menu {
+	&-icon {
+		width: 28px;
+		height: 28px;
+		margin-left: 24px;
+
+		.sprite {
+			fill: $font !important;
+		}
+		&:hover {
+			.sprite {
+				fill: $primary !important;
+			}
+		}
+		&.home {
+			width: 34px;
+		}
+	}
+}
+.m-half-screen {
+	min-height: calc(100vh - 80px);
+}
+.half-insta {
+	width: 67%;
+	min-height: calc(100vh - 80px);
+}
+.insta-title {
+	@include fz(32);
+}
+.screen-info {
+	top: 80px;
+	overflow-y: auto;
+
+	&-flex {
+		min-height: 0;
+		height: calc(100vh - 80px);
+		padding: 3vh 0;
+	}
+	&-inner {
+		padding: 0 8vw;
+		@include fz(16);
+
+		p {
+			margin-bottom: 2.5vh;
+		}
+	}
+}
+.btn {
+	height: 60px;
+	line-height: 54px;
+	@include fz(15);
+	border-width: 3px;
+	min-width: 150px;
+	padding: 0px 25px;
+}
+
+.club {
+	overflow: hidden;
+}
+.club-cheeze {
+	position: relative;
+	height: auto;
+	overflow: hidden;
+	padding: 3vh 8vw 10vh;
+
+	&-body {
+		height: auto;
+	}
+	&-congratulate {
+		top: 5%;
+	}
+	&-social {
+		@include fz(20);
+	}
+	&-text {
+		transform: translate(0,-40%);
+	}
+}
+.club-chicken {
+	position: relative;
+	height: auto;
+	overflow: hidden;
+	padding: 10vh 8vw;
+
+	&-body {
+		height: auto;
+	}
+	&-congratulate {
+		top: 5%;
+	}
+	&-social {
+		@include fz(20);
+	}
+	&-text {
+		transform: translate(0,-40%);
+	}
+}
+.screen-body {
+	position: relative;
+}
+.burger-info {
+	@include fz(20);
+}
+.half-screen {
+	height: calc(100vh - 80px);
+}
+
+
+.promo {
+	opacity: 0;
+	transition: opacity .8s, transform .8s;
+	backface-visibility: hidden;
+
+	&.chicken {
+		transform: translate3d(-40%,0,0);
+	}
+	&.cheeze {
+		transform: translate3d(40%,0,0);
+	}
+}
+.murger {
+	&-img,
+	&-info,
+	&-btn {
+		opacity: 0;
+		transition: opacity .8s, transform .8s;
+		backface-visibility: hidden;
+	}
+	&-info {
+		transform: translate3d(0,-40%,0);
+	}
+	&-img {
+		transform: scale(0.75);
+		transition-delay: .4s;
+	}
+	&-btn {
+		transform: translate3d(0,40%,0);
+		transition-delay: .8s;
+	}
+}
+.insta-photo {
+	opacity: 0;
+	transition: opacity .8s, transform .8s;
+	backface-visibility: hidden;
+	transform: scale(0.75);
+}
+.m-animate {
+	&.visible {
+
+		.promo {
+			opacity: 1;
+			transform: translate3d(0,0,0);
+		}
+		.murger {
+			&-info,
+			&-btn {
+				opacity: 1;
+				transform: translate3d(0,0,0);
+			}
+			&-img {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+		.insta-photo {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	&.nonvisible {
+		.murger {
+			&-info {
+
+			}
+			&-btn {
+				transition-delay: 0s
+			}
+			&-img {
+				transition-delay: 0s
+			}
+		}
+	}
+}
+
+}/*992px end*/
+
+
+
+@media (max-width : 890px) {
+
+.half-insta {
+	width: 70%;
+}
+.murger.cheeze {
+	padding-left: 8%;
+}
+
+}/* 890px end */
+
+
+@media (max-width : 768px) {
+
+@for $i from 1 through 12 {
+  .flx-x-#{$i} {
+  	-webkit-flex: (100% / 12 * $i);
+  	-moz-flex: (100% / 12 * $i);
+  	-ms-flex: (100% / 12 * $i);
+  	-o-flex: (100% / 12 * $i);
+  	flex: (100% / 12 * $i);
+  	max-width: (100% / 12 * $i);
+  }
+}
+@for $ord from -3 through 3 {
+  .x-order-#{$ord} {
+		-webkit-box-ordinal-group: $ord;
+		-webkit-order: $ord;
+		-ms-flex-order: $ord;
+		order: $ord;
+  }
+}
+.x-hidden {
+	display: none;
+}
+
+.m-half-screen {
+	min-height: 0;
+	display: block;
+	padding: 5vh 0;
+}
+.promo {
+	height: auto;
+	margin-bottom: 0;
+	padding-bottom: 10%;
+
+	&-logo {
+		img {
+			position: static;
+			height: auto;
+		}
+	}
+	&-burger {
+		bottom: 0;
+
+		img {
+			max-height: none;
+			max-width: 65%;
+		}
+	}
+	&-name {
+		@include fz(32);
+	}
+	&.chicken {
+		padding-right: 60%;
+
+		.promo-name {
+			right: auto;
+			left: 45%;
+			top: 15%;
+		}
+		.promo-burger {
+			padding-left: 10%;
+		}
+	}
+	&.cheeze {
+		padding-left: 60%;
+
+		.promo-logo {
+			position: relative;
+			left: -15vw;
+		}
+		.promo-name {
+			left: auto;
+			right: 45%;
+			bottom: 15%;
+		}
+		.promo-burger {
+			right: -5vw;
+		}
+	}
+}
+.m-screen-home {
+	.vs {
+		top: 47%;
+    left: 52%;
+    width: 30%;
+	}
+	.row.valign-center {
+		min-height: calc(100vh - 80px);
+	}
+}
+
+.m-screen-insta {
+	.screen-skew {
+		display: none;
+		visibility: hidden;
+	}
+}
+.half-insta {
+	width: 100%;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 8vh 15px 8vh;
+	min-height: 0;
+}
+.bg_primary {
+	background: $primary;
+}
+.bg_white {
+	background: #FFF;
+}
+.insta-title {
+	text-align: center;
+	margin-bottom: 3vh;
+}
+
+.m-screen-comparsion {
+	.screen-skew {
+		display: none;
+		visibility: hidden;
+	}
+	.half-screen {
+		height: auto;
+	}
+}
+.flx-chicken-comparsion {
+	background: $primary;
+}
+.murger {
+	text-align: center;
+	padding: 10vh 5vw 10vh;
+
+	&-info {
+		text-align: left;
+		width: 355px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 80px;
+		padding-right: 0;
+		margin-bottom: 15px;
+
+		&-item {
+			margin-bottom: 10px;
+
+			svg.sprite {
+				top: 11px;
+				margin-top: 0;
+			}
+		}
+	}
+	&-img {
+		margin-bottom: 10px;
+	}
+	&-btn {
+		padding-left: 0;
+	}
+	&.chicken {
+		.murger-img {
+			img {
+				transform: translate(6%,0);
+			}
+		}
+	}
+	&.cheeze {
+		padding-left: 5vw;
+
+		.murger-info {
+			padding-left: 80px;
+		}
+		.murger-btn {
+			padding-left: 0;
+		}
+		.murger-img {
+			margin-right: 0;
+			text-align: center;
+		}
+	}
+}
+.club-chicken {
+	&-social {
+		right: 0;
+		left: auto;
+	}
+}
+.screen-skew-yellow {
+	opacity: 0 !important;
+	transform: skew(0deg) !important;
+}
+.m-animate.visible {
+	.screen-skew-yellow {
+		opacity: 1 !important;
+		transform: skew(-20deg) !important;
+	}
+}
+.social-appeal {
+	display: block;
+	@include fz(15);
+	text-align: center;
+	margin: 2vh 0 -3vh;
+}
+.last-anim.m-animate {
+	.insta-photo {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+}/*768px end*/
+
+
+@media (max-width : 640px) {
+
+.club-chicken {
+	text-align: center;
+
+	&-body {
+		padding: 0;
+	}
+	&-social {
+		position: static;
+		@include fz(23);
+	}
+	&-congratulate {
+		position: static;
+		@include fz(32);
+		margin-bottom: 20px;
+	}
+	&-imgs {
+		margin-bottom: 30px;
+		max-width: 360px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&-bg {
+		transform: skew(0deg);
+	}
+}
+.club-cheeze {
+	text-align: center;
+
+	&-body {
+		padding: 0;
+	}
+	&-social {
+		position: static;
+		@include fz(23);
+	}
+	&-congratulate {
+		position: static;
+		@include fz(32);
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	&-imgs {
+		margin-bottom: 30px;
+		max-width: 360px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&-bg {
+		transform: skew(0deg);
+	}
+}
+
+}/* 640px end */
+
+
+@media (max-width : 570px) {
+
+@for $i from 1 through 12 {
+  .flx-u-#{$i} {
+  	-webkit-flex: (100% / 12 * $i);
+  	-moz-flex: (100% / 12 * $i);
+  	-ms-flex: (100% / 12 * $i);
+  	-o-flex: (100% / 12 * $i);
+  	flex: (100% / 12 * $i);
+  	max-width: (100% / 12 * $i);
+  }
+}
+@for $ord from -3 through 3 {
+  .u-order-#{$ord} {
+		-webkit-box-ordinal-group: $ord;
+		-webkit-order: $ord;
+		-ms-flex-order: $ord;
+		order: $ord;
+  }
+}
+.u-hidden {
+	display: none;
+}
+
+.promo {
+	&-name {
+		@include fz(25);
+	}
+}
+.preloader {
+	padding: 10vh 20vw;
+
+	svg {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.btn {
+	height: 54px;
+	line-height: 50px;
+	@include fz(12);
+	border-width: 2px;
+	min-width: 125px;
+	padding: 0px 25px;
+}
+.screen-info {
+	&-inner {
+		padding: 3vh 5vw 6vh;
+	}
+}
+.screen-info-flex {
+	display: block;
+}
+.half-insta {
+	max-width: 430px;
+}
+.club-chicken-burger {
+	left: 10%;
+	bottom: -10%;
+	max-width: 110%;
+}
+
+}/* 570px end */
+
+
+@media (max-width : 533px) {
+
+
+
+}/* 533px end */
+
+
+@media (max-width : 480px) {
+
+.promo {
+	&.chicken {
+		.promo-name {
+			left: auto;
+			right: 10%;
+		}
+	}
+	&.cheeze {
+		.promo-name {
+			right: auto;
+			left: 10%;
+		}
+		
+	}
+}
+.insta-title {
+	@include fz(30);
+}
+.murger-info {
+	@include fz(18);
+}
+.m-screen-home .vs,
+.vs {
+	width: 40%;
+}
+.murger {
+	&-img {
+		margin: 4vh -5vw;
+
+		img {
+			max-height: none;;
+		}
+	}
+	&.cheeze {
+		.murger-img {
+			margin-right: -5vw;
+		}
+	}
+}
+.half-insta .row [class*="flx-"] {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.insta-photo {
+	margin-bottom: 8px;
+}
+
+}/*480px end*/
+
+
+@media (max-width : 420px) {
+
+.m-half-screen-chicken {
+	padding-top: 2.5vh;
+}
+.m-half-screen-cheeze {
+	padding-bottom: 2.5vh;
+}
+.promo.chicken {
+	padding-right: 50%;
+
+	.promo-name {
+		right: 5%;
+	}
+}
+.promo.cheeze {
+	padding-left: 50%;
+
+	.promo-name {
+		left: 5%;
+	}
+}
+
+}/* 420px end */
+
+
+
+@media (max-width : 380px) {
+
+	.insta-title {
+		@include fz(25);
+	}
+
+}/*380px end*/
+
+
+@media (max-width : 370px) {
+
+
+
+}/*370px end*/
+
+
+@media (max-width : 350px) {
+
+
+
+}/*350px*/

@@ -1,0 +1,69 @@
+header.header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 30;
+	padding-top: 4vw;
+}
+.header-inner {
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+.header-logo {
+	width: 82px;
+	line-height: 0;
+}
+.header-menu {
+	font-size: 0;
+
+	&-icon {
+		display: inline-block;
+		vertical-align: middle;
+		// margin-left: 2vw;
+		// height: 2.25vmax;
+		// width: 2.25vmax;
+		margin-left: 40px;
+		width: 47px;
+		height: 47px;
+		cursor: pointer;
+
+		&.home {
+			// width: 2.5vmax;
+			width: 54px;
+		}
+		&.active {
+			.sprite {
+				fill: #FFF;
+			}
+		}
+		&.first {
+			.sprite {
+				fill: $primary;
+			}
+		}
+		&.gray {
+			.sprite {
+				fill: rgba(#FFF, .35);
+			}
+		}
+
+		.sprite {
+			fill: $font;
+		}
+		&:hover {
+			.sprite {
+				fill: $primary;
+			}
+		}
+	}
+	&.yellow {
+		.header-menu-icon {
+			&:hover {
+				.sprite {
+					fill: #FFF;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,484 @@
+body {
+	background: #FFF url('../images/bg_white.png');
+}
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+	min-width: 100%;
+}
+.middle {
+	height: 100vh;
+}
+.scroll-by-screens {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	transform: translate3d(0, 0, 0);
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	will-change: transform;
+	transition: transform .8s $beizer;
+}
+.screen {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.screen-skew {
+	&-yellow {
+		position: absolute;
+		z-index: -1;
+		left: -50%;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		background: $primary;
+		opacity: 0;
+		transform: skew(-20deg) translate(-100%,0);
+		transition: opacity .85s $beizer, transform .85s $beizer;
+		backface-visibility: hidden;
+	}
+}
+.screen.nonvisible,
+.m-screen.nonvisible {
+	.screen-skew-yellow {
+		opacity: 1;
+		transform: skew(-20deg) translate(100%,0);
+	}
+}
+.screen.visible,
+.m-screen.visible {
+	.screen-skew-yellow {
+		opacity: 1;
+		transform: skew(-20deg) translate(0,0);
+	}
+}
+.vs {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-49%, -50%);
+	width: 25%;
+
+	img {
+		display: block;
+		margin: 0 auto;
+		min-width: 80%;
+	}
+}
+
+.screen {
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+.half-screen {
+	height: 100vh;
+}
+.club-promo {
+	position: relative;
+	height: 65vh;
+	width: 100%;
+
+	&-logo {
+		backface-visibility: hidden;
+		opacity: 0;
+
+		img {
+			height: 65vh;
+			max-width: none;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+		}
+	}
+	&-burger {
+		position: absolute;
+		bottom: -15%;
+		width: 85%;
+
+		img {
+			display: block;
+			max-height: 48vh;
+			height: 39vh;
+			margin: 0 auto;
+		}
+	}
+	&-name {
+		position: absolute;
+		z-index: 1;
+		font-size: 3vmax;
+		line-height: 1.05;
+		font-weight: 700;
+		font-style: italic;
+	}
+	&.chicken {
+		padding-right: 30%;
+
+		.club-promo-logo {
+			transform: translate(-40%,0);
+		}
+		.club-promo-name {
+			right: 5%;
+			top: 5%;
+		}
+		.club-promo-burger {
+			left: 14%;
+		}
+	}
+	&.cheeze {
+		padding-left: 30%;
+
+		.club-promo-name {
+			bottom: 0;
+			left: 0;
+		}
+		.club-promo-logo {
+			transform: translate(40%,0);
+		}
+		.club-promo-burger {
+			right: -5vw;
+			margin-right: -15px;
+		}
+	}
+}
+
+.screen-info {
+	position: fixed;
+	z-index: 29;
+	background: rgba(#000,.88);
+	left: 0;
+	top: 0;
+	right: 0;
+	color: #FFF;
+
+	&-flex {
+		min-height: 100vh;
+	}
+	&-inner {
+		padding: 10vh 8vw 0 8vw;
+		// @include fz(30);
+		font-size: 1.60vmax;
+
+		p {
+			margin-bottom: 5vh;
+		}
+	}
+	&-title {
+		font-size: 3.75vmax;
+		font-weight: 700;
+		font-style: italic;
+		line-height: 1.1;
+		margin-bottom: 5vh;
+	}
+	&-btn {
+		margin-top: 5vh;
+	}
+}
+
+.burger {
+	padding-top: 8vh;
+	width: 100%;
+
+	&-info {
+		font-size: 1.5vmax;
+		font-weight: 700;
+		font-style: italic;
+		padding-left: 8vw;
+		transform: translate(0, -30%);
+		opacity: 0;
+		backface-visibility: hidden;
+		line-height: 1.3;
+		margin-bottom: -2vh;
+
+		&-item {
+			position: relative;
+
+			svg.sprite {
+				position: absolute;
+				width: 51px;
+				height: 5px;
+				left: -60px;
+				top: 50%;
+				margin-top: -1px;
+			}
+		}
+	}
+	&-img {
+		// margin-bottom: 3vh;
+		backface-visibility: hidden;
+		transform: scale(0.75);
+
+		img {
+			max-height: 50vh;
+		}
+	}
+	&-btn {
+		padding-left: 8vw;
+		transform: translate(0, 30%);
+		opacity: 0;
+		backface-visibility: hidden;
+	}
+	&.cheecken {
+		padding-left: 10%;
+	}
+	&.cheeze {
+		padding-left: 12%;
+
+		.burger-info,
+		.burger-btn {
+			padding-left: 12vw;
+		}
+		.burger-img {
+			text-align: right;
+			margin-right: -5vw;
+		}
+	}
+}
+
+
+
+.screen-insta {
+	padding-left: 0;
+	padding-right: 0;
+}
+.half-insta {
+	min-height: 100vh;
+	width: 60%;
+	margin: 0 auto;
+	padding-top: 20vh;
+
+	.row {
+		margin-left: -6px;
+		margin-right: -6px;
+
+		[class*="flx-"] {
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+	}
+}
+.insta-title {
+	font-weight: 700;
+	font-style: italic;
+	margin-bottom: 2.5vh;
+	font-size: 3vmax;
+}
+.insta-photo {
+	display: block;
+	height: 0;
+	position: relative;
+	margin-bottom: 12px;
+	padding-top: 100%;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		max-height: 100%;
+	}
+}
+
+
+.club-chicken {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 100vh;
+	z-index: 9;
+	padding: 15vh 8vw 0 8vw;
+	// background: $primary;
+
+	&-bg {
+		background: $primary;
+		position: absolute;
+		z-index: -1;
+    left: -20%;
+    top: 0;
+		bottom: 0;
+    width: 160%;
+    transform: skew(-20deg) translate(-160%,0);
+	}
+	&-body {
+		padding-right: 50%;
+		position: relative;
+		height: 80vh;
+	}
+	&-imgs {
+		position: relative;
+		padding-bottom: 10%;
+	}
+	&-logo {
+		display: block;
+		max-height: 70vh;
+		opacity: 0;
+		transform: scale(0.75) translate(0,-80vh);
+	}
+	&-burger {
+		position: absolute;
+		left: 20%;
+    bottom: -5%;
+		max-width: 120%;
+		opacity: 0;
+		transform: scale(0.75);
+	}
+	&-text {
+		opacity: 0;
+		transform: translate(100%, 0);
+	}
+	&-congratulate {
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		font-size: 4.5vmax;
+		line-height: 1.1;
+		font-weight: 700;
+		font-style: italic;
+	}
+	&-social {
+		position: absolute;
+		bottom: 8%;
+		left: 75%;
+		font-size: 1.75vmax;
+		line-height: 1.2;
+
+		a {
+			color: $font;
+			font-weight: 700;
+
+			&:hover {
+				color: #FFF;
+			}
+		}
+	}
+}
+
+.club-cheeze {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 100vh;
+	z-index: 9;
+	padding: 5vh 8vw 0 12vw;
+
+	&-bg {
+		background: #FFF url('../images/bg_white.png');
+		position: absolute;
+		z-index: -1;
+    left: -20%;
+    top: 0;
+		bottom: 0;
+    width: 160%;
+    transform: skew(-20deg) translate(160%,0);
+	}
+	&-body {
+		padding-left: 50%;
+		position: relative;
+		height: 87vh;
+	}
+	&-imgs {
+		position: relative;
+		padding-bottom: 15%;
+	}
+	&-logo {
+		display: block;
+		max-height: 70vh;
+		opacity: 0;
+		transform: scale(0.75) translate(0,-80vh);
+		position: relative;
+		top: 6vh;
+	}
+	&-burger {
+		position: absolute;
+		right: -8vw;
+    bottom: -5%;
+		max-width: 120%;
+		opacity: 0;
+		transform: scale(0.75);
+	}
+	&-text {
+		opacity: 0;
+		transform: translate(-100%, 0);
+	}
+	&-congratulate {
+		position: absolute;
+		top: 18%;
+		left: 0%;
+		width: 45%;
+		font-size: 4.5vmax;
+		line-height: 1.1;
+		font-weight: 700;
+		font-style: italic;
+	}
+	&-social {
+		position: absolute;
+		bottom: 3%;
+		left: 0%;
+		font-size: 1.75vmax;
+		line-height: 1.2;
+
+		a {
+			color: $font;
+			font-weight: 700;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}
+.scroll-hint {
+	position: fixed;
+	// height: 2.25vmax;
+	// width: 2.25vmax;
+	width: 47px;
+	height: 47px;
+	bottom: 5vw;
+	right: 5vw;
+	z-index: 10;
+	animation: updown 2s infinite;
+}
+@keyframes updown {
+	50% {
+		transform: translate3d(0,12px,0)
+	}
+}
+
+
+@media (max-height: 850px) {
+
+.club-promo {
+	&-burger {
+		bottom: -14%;
+		width: 85%;
+	}
+}
+.btn {
+	height: 74px;
+	line-height: 66px;
+
+	&-bordered-white,
+	&-bordered-yellow {
+		line-height: 66px;
+	}
+}
+
+}
+
+@media (max-height: 850px) {
+
+	.club-promo {
+		&-burger {
+			bottom: -18%;
+			width: 95%;
+		}
+	}
+}

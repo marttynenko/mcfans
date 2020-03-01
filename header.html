@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>McFans</title>
+  <meta name="keywords" content="McFans" />
+  <meta name="description" content="McFans" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1024, initial-scale=1">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+  <style>
+    @font-face {
+      font-family: 'Speedee';
+      src: local('Speedee'), local('Speedee-Regular'),
+        url('fonts/Speedee/Speedee_Rg.otf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: fallback;
+    }
+    @font-face {
+      font-family: 'Speedee';
+      src: local('Speedee Bold'), local('Speedee-Bold'),
+        url('fonts/Speedee/Speedee_Bd.otf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: fallback;
+    }
+    @font-face {
+      font-family: 'Speedee';
+      src: local('Speedee Bold'), local('Speedee-BoldItalic'),
+        url('fonts/Speedee/Speedee-BoldItalic.otf') format('truetype');
+      font-weight: 700;
+      font-style: italic;
+      font-display: fallback;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+<div class="preloader">
+  <div class="preloader-logo">
+    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" height="238.5" width="272.7" version="1.1" viewBox="0 0 272.70001 238.5">
+     <path fill="#ffbc0d" d="m195.8 17.933c23.3 0 42.2 98.3 42.2 219.7h34c0-130.7-34.3-236.5-76.3-236.5-24 0-45.2 31.7-59.2 81.5-14-49.8-35.2-81.5-59-81.5-42 0-76.2 105.7-76.2 236.4h34c0-121.4 18.7-219.6 42-219.6s42.2 90.8 42.2 202.8h33.8c0-112 19-202.8 42.3-202.8"/>
+    </svg>
+  </div>
+  <div class="preloader-name"></div>
+</div>
+<style>
+  .preloader {
+    position: fixed;
+    background: #FFF;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+  }
+  .preloader.leave {
+    opacity: 0;
+  }
+</style>
+<div id="app" class="wrapper">
+<header class="header" id="header">
+
+  <div class="header-inner">
+    <div class="flex valign-center align-justify">
+
+      <div class="header-logo">
+        <img src="images/mclogo.png" alt="McFans" loading="lazy">
+      </div>
+      
+      <div class="header-menu" :class="{yellow: chickenClub}">
+        <div :class="{ gray: infoStatus }" :class="{ first: screenActive === 0 }" class="header-menu-icon home" @click.prevent="toHomeScreen()">
+          <svg class="sprite svg-menu-icon"><use xlink:href="svg/svg/symbols.svg#m-home"/></svg>
+        </div>
+        <a :class="{ gray: infoStatus }" href="https://www.instagram.com/mcdonalds_belarus/" target="_blank" class="header-menu-icon">
+          <svg class="sprite svg-menu-icon"><use xlink:href="svg/svg/symbols.svg#m-insta"/></svg>
+        </a>
+        <div class="header-menu-icon" @click="infoVisibility()" :class="{ active: infoStatus }">
+          <svg class="sprite svg-menu-icon"><use xlink:href="svg/svg/symbols.svg#m-info"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</header>
+
+<div id="middle" class="middle">
